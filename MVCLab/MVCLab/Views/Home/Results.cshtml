@@ -1,0 +1,14 @@
+﻿@model IEnumerable<MVCLab.Models.Wine>
+
+@{ 
+    <link href="~/style/StyleSheet.css" rel="stylesheet" />
+    <body>
+        @foreach (var item in Model) {
+            <div>
+                <p> @item.Description </p>
+                <p> Cost: @item.Price, Score: @item.Points </p>
+            </div>
+        }
+
+    </body>
+}
