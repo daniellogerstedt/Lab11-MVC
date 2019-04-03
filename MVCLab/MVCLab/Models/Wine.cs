@@ -20,6 +20,12 @@ namespace MVCLab.Models
         public string Variety { get; set; }
         public string Winery { get; set; }
 
+        /// <summary>
+        /// Reads the csv data file, and queries the data for wines that are within the requested price and point range.
+        /// </summary>
+        /// <param name="price">The maximum price</param>
+        /// <param name="points">The minimum points</param>
+        /// <returns>The list of wines within the range requested</returns>
         public static List<Wine> GetWineList(int price, int points)
         {
             var reader = new StreamReader(File.OpenRead("../wine.csv"));
